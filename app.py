@@ -17,22 +17,6 @@ def home():
 investment_amount=0
 data_required=[]
 portfolio_of_stocks=[]
-# overall_portfolio=[]
-# nav_price=0
-# current_price=0
-# present_investment_worth=0
-# def index_Investing():
-#     return nav_price
-# def default():
-#     return current_price
-
-# switcher = {
-#     'Index Investing': index_Investing,
-#     'Ethical Investing': default,
-#     'Growth Investing': default,
-#     'Quality Investing': default,
-#     'Value Investing': default
-#     }
 
 def clear_globals():
     investment_amount=0
@@ -71,10 +55,6 @@ def build_stock_portfolio(req_data,strategy_name,investment_amount):
                 holdings = []
                 stock_data = []
                 stock_info = yf.Ticker(item['symbol'])
-                # global nav_price
-                # nav_price = stock_info.info['navPrice']
-                # global current_price
-                # current_price = stock_info.info['currentPrice']
                 present_stock_price= switch(strategy,stock_info)
                 stock_data.append(item['name'])
                 stock_data.append(invested_funds)
@@ -124,7 +104,6 @@ def plot_stock_distribution(data,strategy_name,overall_portfolio):
                 for i in range(5, 0, -1)]
         print(overall_portfolio)
         return times    
-        # print(present_investment_worth)  
     times = prepare_stock_distribution_data(data)      
     plt.clf()
     plt.plot(times, overall_portfolio)
