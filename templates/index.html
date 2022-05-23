@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Stock Portfolio Suggestion Engine</h1>
+						</div>
+						<form action="/result" method="POST">
+							{% if name %}
+							<center>
+								<h3 style="color: #ffc001;" class="let_space">You will be investing {{name}} USD, Best of luck!</h3>
+							</center>
+							{% endif %}
+							<div class="form-group">
+								<span class="form-label" for="name">Enter amount to invest in USD:</span>
+								<input class="form-control" type="number" id="name" name="name" min="5000" required placeholder="Enter amount to invest in USD">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Enter the strategy you want to choose:</span>
+								<select class="form-control" type="text" id="strategy" name="strategy" required placeholder="Enter the strategy you want to choose">
+									<option name='Ethical Investing' value='Ethical Investing'>Ethical Investing </option>
+									<option name='Value Investing' value='Value Investing'>Value Investing </option>
+									<option name='Growth Investing' value='Growth Investing'>Growth Investing </option>
+									<option name='Index Investing' value='Index Investing'>Index Investing </option>
+									<option name='Quality Investing' value='Quality Investing'>Quality Investing </option>
+									<option name='Ethical and Value Investing' value='Ethical Investing and Value Investing'>Ethical Investing and Value Investing </option>
+									<option name='Ethical and Growth Investing' value='Ethical Investing and Growth Investing'>Ethical Investing and Growth Investing </option>
+									<option name='Ethical and Index Investing' value='Ethical Investing and Index Investing'>Ethical Investing and Index Investing </option>
+									<option name='Ethical and Quality Investing' value='Ethical Investing and Quality Investing'>Ethical Investing and Quality Investing </option>
+									<option name='Value and Growth Investing' value='Value Investing and Growth Investing'>Value Investing and Growth Investing </option>
+									<option name='Value and Index Investing' value='Value Investing and Index Investing'>Value Investing and Index Investing </option>
+									<option name='Value and Quality Investing' value='Value Investing and Quality Investing'>Value Investing and Quality Investing </option>
+									<option name='Growth and Quality Investing' value='Growth Investing and Quality Investing'>Growth Investing and Quality Investing </option>
+									<option name='Growth and Index Investing' value='Growth Investing and Index Investing'>Growth Investing and Index Investing </option>
+									<option name='Quality and Index Investing' value='Quality Investing and Index Investing'>Quality Investing and Index Investing </option>
+								</select>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn" type="Submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
