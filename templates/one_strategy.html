@@ -2,35 +2,210 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="stylesheet" type="text/css" href="../static/index.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="../static/style.css" />
+        <link type="text/css" rel="stylesheet" href="../static/strategy_style.css"/>
     </head>
-    <body style="margin: 0;">
-        <div id="one_strategy" style="height: 100vh">
-            <form style="height: 90vh; overflow: auto; background-color: seashell; width: 60vw">
-                <h2>
-                    <center>Current value of Portfolio : {{ name }} </center> <br />
-                    <center>Selected Investment Strategy/Strategies : {{ strategy }} </center> <br />
-                    <center>Stocks Chosen : {{ stock1 }}, {{ stock2 }},{{ stock3 }}, {{ stock4 }} </center> <br />
-                    <p>
-                    <center>Current value of 1 share of {{ stock1 }} is {{stock1_price }} </center> <br/>
-                    <center>Invested money in {{ stock1 }} is {{ stock1_money }} </center> <br />
-                    </p>
-                    <p>
-                    <center>Current value of 1 share of {{ stock2 }} is {{stock2_price }} </center> <br/>
-                    <center>Invested money in {{ stock2 }} is {{ stock2_money }} </center> <br />
-                    </p>
-                    <p>
-                    <center>Current value of 1 share of {{ stock3 }} is {{stock3_price }}</center><br/>
-                    <center>Invested money in {{ stock3 }} is {{ stock3_money }} </center> <br />
-                    </p>
-                    <p>
-                    <center>Current value of 1 share of {{ stock4 }} is {{stock4_price }}</center><br/>
-                    <center>Invested money in {{ stock4 }} is {{ stock4_money }} </center> <br />
-                    </p>
-                    <center><img src={{ url_pie }} alt="Image not found"/> </center> <br />
+    <body style="margin: 0;">        
+        <div id="strategy">
+            <div class="booking-form">
+            <div class="form-header">
+                <h1>Stock Portfolio Suggestion Engine</h1>
+              
+            </div>
+        </div>  
+            <div class="container mt-5 mb-3" style="padding-left: 161px;padding-top: 30px;">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card p-3 mb-2" style="background:#f5f5f5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                 
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">{{stock1}}</h6>
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>{{strategy}}</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="row">
+                                    <div class="col-8" style="color:#696969">Value/Share</div>
+                                    <div class="col" style="color:#696969">{{stock1_price}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Amount Invested</div>
+                                    <div class="col" style="color:#696969">{{stock1_money}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Base Investement Price</div>
+                                    <div class="col" style="color:#696969">{{name}}</div>
+                                   </div>
+                                <div class="mt-5">
+                                    <div class="mt-3">
+                                        <div class="row">
+                                        <div class="col-6">
+                                        <a href="{{stock1_link}}" target="_blank" class="card-link"><span class="text2">Stock link</span></a>  
+                                        </div>
+                                        <div class="col-6">
+                                        <form action="/news" method="POST">
+                                            <input type="hidden" id="symbol" name="symbol" value="{{stock1}}">
+                                            <button type="Submit" style="border: none;background: #f5f5f5;">  <a href="" target="_blank" class="card-link"><span class="text2">Get Stock News</span></a></button>                                          
+                                        </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card p-3 mb-2" style="background:#f5f5f5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">{{stock2}}</h6> 
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>{{strategy}}</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="row">
+                                    <div class="col-8" style="color:#696969">Value/Share</div>
+                                    <div class="col" style="color:#696969">{{stock2_price}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Amount Invested</div>
+                                    <div class="col" style="color:#696969">{{stock2_money}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Base Investement Price</div>
+                                    <div class="col" style="color:#696969">{{name}}</div>
+                                   </div>
+                                <div class="mt-5">
+                                    <div class="mt-3">
+                                        <div class="row">
+                                            <div class="col-6">
+                                        <a href="{{stock2_link}}" target="_blank" class="card-link"><span class="text2">Stock link</span></a>  
+                                        </div>
+                                        <div class="col-6">
+                                        <form action="/news" method="POST">
+                                            <input type="hidden" id="symbol" name="symbol" value="{{stock2}}">
+                                            <button type="Submit" style="border: none;background: #f5f5f5;">  <a href="" target="_blank" class="card-link"><span class="text2">Get Stock News</span></a></button>
+                                           
+                                        </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card p-3 mb-2" style="background:#f5f5f5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">{{stock3}}</h6> 
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>{{strategy}}</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="row">
+                                    <div class="col-8" style="color:#696969">Value/Share</div>
+                                    <div class="col" style="color:#696969">{{stock3_price}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Amount Invested</div>
+                                    <div class="col" style="color:#696969">{{stock3_money}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Base Investement Price</div>
+                                    <div class="col" style="color:#696969">{{name}}</div>
+                                   </div>
+                                <div class="mt-5">
+                                    <div class="mt-3">
+                                        <div class="row">
+                                            <div class="col-6">
+                                        <a href="{{stock3_link}}" target="_blank" class="card-link"><span class="text2">Stock link</span></a>  
+                                            </div>
+                                            <div class="col-6">
+                                        <form action="/news" method="POST">
+                                            <input type="hidden" id="symbol" name="symbol" value="{{stock3}}">
+                                            <button type="Submit" style="border: none;background: #f5f5f5;">  <a href="" target="_blank" class="card-link"><span class="text2">Get Stock News</span></a></button>
+                                           
+                                        </div>
+                                        </form>
+                                    </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card p-3 mb-2" style="background:#f5f5f5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    
+                                    <div class="ms-2 c-details">
+                                        <h6 class="mb-0">{{stock4}}</h6> 
+                                    </div>
+                                </div>
+                                <div class="badge"> <span>{{strategy}}</span> </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="row">
+                                    <div class="col-8" style="color:#696969">Value/Share</div>
+                                    <div class="col" style="color:#696969">{{stock4_price}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Amount Invested</div>
+                                    <div class="col" style="color:#696969">{{stock4_money}}</div>
+                                   </div> 
+                                   <div class="row">
+                                    <div class="col-8" style="color:#696969">Base Investement Price</div>
+                                    <div class="col" style="color:#696969">{{name}}</div>
+                                   </div>
+                                <div class="mt-5">
+                                    <div class="mt-3">
+                                        <div class="row">
+                                            <div class="col-6">
+                                        <a href="{{stock4_link}}" target="_blank" class="card-link"><span class="text2">Stock link</span></a>  
+                                        </div>
+                                        <div class="col-6">
+                                        <form action="/news" method="POST">
+                                            <input type="hidden" id="symbol" name="symbol" value="{{stock4}}">
+                                            <button type="Submit" style="border: none;background: #f5f5f5;">  <a href="" target="_blank" class="card-link"><span class="text2">Get Stock News</span></a></button>
+                                          
+                                        </form>
+                                    </div>
+                                    </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                   <img src={{ url_pie }} alt="Image not found"/> </center> <br />
+                    </div>
+                    <div class="col-6">
                     <center><img src={{ url}} alt="Image not found"/> </center> <br />
-                </h2>
-            </form>
+                    </div>
+                    </div>
+            </div>
         </div>
+
+        
     </body>
 </html>

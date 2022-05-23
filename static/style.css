@@ -20,11 +20,11 @@
 }
 
 #one_strategy {
-	font-family: 'Montserrat', sans-serif;
+	
 	background-image: url('../static/images/background.jpeg');
 	background-size: cover;
 	background-position: center;
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 }

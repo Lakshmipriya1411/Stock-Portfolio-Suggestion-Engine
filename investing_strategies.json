@@ -3,110 +3,130 @@
     {
       "symbol": "TSLA",
       "name": "Tesla, Inc.",
-      "percentage": "40"
+      "percentage": "40",
+      "link":"https://www.google.com/finance/quote/TSLA:NASDAQ"
     },
     {
       "symbol": "UNFI",
       "name": "United Natural Foods, Inc.",
-      "percentage": "10"
+      "percentage": "10",
+      "link":"https://www.google.com/finance/quote/UNFI:NYSE"
     },
     {
       "symbol": "WY",
       "name": "Weyerhaeuser Company",
-      "percentage": "10"
+      "percentage": "10",
+      "link":"https://www.google.com/finance/quote/WY:NYSE"
     },
     {
       "symbol": "GOOG",
       "name": "Alphabet Inc.",
-      "percentage": "40"
+      "percentage": "40",
+      "link":"https://www.google.com/finance/quote/GOOG:NASDAQ"
     }
   ],
   "Growth Investing": [
     {
       "symbol": "WOOF",
       "name": "Petco Health and Wellness Co. Inc.",
-      "percentage": "25"
+      "percentage": "25",
+      "link":"https://www.google.com/finance/quote/WOOF:NASDAQ"
     },
     {
       "symbol": "LYB",
       "name": "Lyondell Basell Industries NV",
-      "percentage": "30"
+      "percentage": "30",
+      "link":"https://www.google.com/finance/quote/LYB:NYSE"
     },
     {
       "symbol": "NLSN",
       "name": "Nielsen Holdings PLC",
-      "percentage": "25"
+      "percentage": "25",
+      "link":"https://www.google.com/finance/quote/NLSN:NYSE"
     },
     {
       "symbol": "SHOP",
       "name": "Shopify Inc ",
-      "percentage": "20"
+      "percentage": "20",
+      "link":"https://www.google.com/finance/quote/SHOP:NYSE"
     }
   ],
   "Index Investing": [
     {
       "symbol": "DJD",
       "name": "Invesco Dow Jones Industrial Average Dividend ETF ",
-      "percentage": "35"
+      "percentage": "35",
+      "link":"https://www.google.com/finance/quote/DJD:NYSEARCA?hl=en"
     },
     {
       "symbol": "VDC",
       "name": "Vanguard Consumer Staples Index Fund ETF",
-      "percentage": "30"
+      "percentage": "30",
+      "link":"https://www.google.com/finance/quote/VDC:NYSEARCA?hl=en"
     },
     {
       "symbol": "SCHE",
       "name": "Schwab Emerging Markets Equity ETF ",
-      "percentage": "25"
+      "percentage": "25",
+      "link":"https://www.google.com/finance/quote/SCHE:NYSEARCA?hl=en"
     },
     {
       "symbol": "IWV",
       "name": "iShares Russell 3000 ETF ",
-      "percentage": "10"
+      "percentage": "10",
+      "link":"https://www.google.com/finance/quote/IWV:NYSEARCA?hl=en"
     }
   ],
   "Quality Investing": [
     {
       "symbol": "UNF",
       "name": "UniFirst Corp",
-      "percentage": "35"
+      "percentage": "35",
+      "link":"https://www.google.com/finance/quote/UNF:NYSE?hl=en"
     },
     {
       "symbol": "CMCSA",
       "name": "Comcast Corporation  ",
-      "percentage": "30"
+      "percentage": "30",
+      "link":"https://www.google.com/finance/quote/CMCSA:NASDAQ?hl=en"
     },
     {
       "symbol": "BK",
       "name": "Bank of New York Mellon  ",
-      "percentage": "25"
+      "percentage": "25",
+      "link":"https://www.google.com/finance/quote/BK:NYSE?hl=en"
     },
     {
       "symbol": "DIS",
       "name": "Walt Disney Co.",
-      "percentage": "10"
+      "percentage": "10",
+      "link":"https://www.google.com/finance/quote/DIS:NYSE?hl=en"
     }
   ],
   "Value Investing": [
     {
       "symbol": "BAC",
       "name": "Bank of America Corporation",
-      "percentage": "35"
+      "percentage": "35",
+      "link":"https://www.google.com/finance/quote/BAC:NYSE?hl=en"
     },
     {
       "symbol": "KHC",
       "name": "The Kraft Heinz Company",
-      "percentage": "25"
+      "percentage": "25",
+      "link":"https://www.google.com/finance/quote/KHC:NASDAQ?hl=en"
     },
     {
       "symbol": "VZ",
       "name": "Verizon Communications Inc.",
-      "percentage": "20"
+      "percentage": "20",
+      "link":"https://www.google.com/finance/quote/VZ:NYSE?hl=en"
     },
     {
       "symbol": "DVA",
       "name": "DaVita Inc.",
-      "percentage": "20"
+      "percentage": "20",
+      "link":"https://www.google.com/finance/quote/DVA:NYSE?hl=en"
     }
   ]
 }
